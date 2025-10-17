@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌸 Happy Women’s Day 20/10 🌸</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Cursive', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: url('https://i.postimg.cc/pX9ChGZk/Gemini-Generated-Image-v5pcy5v5pcy5v5pc.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+/* 🎀 Title đung đưa 🎀 */
+#title {
+    position: absolute;
+    top: 3vh;
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #ff3366;
+    text-shadow: 0 0 0.5vw #ffb3c6, 0 0 1vw #ff6699;
+    z-index: 10;
+    animation: swingTitle 3s ease-in-out infinite;
+    transform-origin: top center;
+}
+@keyframes swingTitle {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(3deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* 🖼️ Ảnh treo đung đưa */
+#photoString {
+    position: absolute;
+    top: 12vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1vw;
+    width: 90%;
+    z-index: 7;
+}
+.photoClip {
+    position: relative;
+    animation: swingPhoto 4s ease-in-out infinite;
+}
+.photoClip:nth-child(odd) { animation-delay: 1s; }
+.photoClip:nth-child(even) { animation-delay: 2s; }
+
+@keyframes swingPhoto {
+    0%,100% { transform: rotate(0deg) translateY(0); }
+    25% { transform: rotate(3deg) translateY(0.5vh); }
+    75% { transform: rotate(-3deg) translateY(-0.5vh); }
+}
+
+.photoClip img {
+    width: 12vw;
+    max-width: 140px;
+    border-radius: 0.5vw;
+    box-shadow: 0 0 1vw rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 2;
+    animation: glowPulse 3s infinite ease-in-out;
+}
+@keyframes glowPulse {
+    0%,100% { box-shadow: 0 0 0.8vw rgba(255,182,193,0.4); }
+    50% { box-shadow: 0 0 2vw rgba(255,255,255,0.9); }
+}
+
+/* ✨ Sparkle riêng quanh từng ảnh */
+.photoSpark {
+    position: absolute;
+    width: 0.6vw;
+    height: 0.6vw;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    animation: sparklePastel 3s linear infinite;
+    z-index: 5;
+    background: radial-gradient(circle, #ffd6e8, #fff0f5, #fff, #fffacd);
+}
+@keyframes sparklePastel {
+    0% { opacity: 0; transform: scale(0.5) translate(0,0); filter: hue-rotate(0deg); }
+    25% { opacity: 1; transform: scale(1) translate(-2px,2px); filter: hue-rotate(60deg); }
+    50% { opacity: 0.8; transform: scale(1.2) translate(1px,-1px); filter: hue-rotate(120deg); }
+    75% { opacity: 1; transform: scale(1) translate(-1px,1px); filter: hue-rotate(180deg); }
+    100% { opacity: 0; transform: scale(0.5) translate(0,0); filter: hue-rotate(360deg); }
+}
+
+/* 🌸 Hoa bay emoji */
+.flower {
+    position: absolute;
+    font-size: 2.5vw;
+    pointer-events: none;
+    z-index: 3;
+    animation: floatUp linear infinite;
+}
+@keyframes floatUp {
+    0% {transform: translateY(100vh) rotate(0deg);}
+    100% {transform: translateY(-10vh) rotate(360deg);}
+}
+
+/* ✨ Chữ chạy ngang dưới màn hình */
+#marqueeText {
+    position: absolute;
+    bottom: 5vh;
+    white-space: nowrap;
+    font-size: 4vw;
+    color: #A3EF85;
+    text-shadow: 0 0 0.3vw #fff, 0 0 0.6vw #ff99cc;
+    z-index: 8;
+    overflow: hidden;
+}
+#marqueeText span {
+    display: inline-block;
+    padding-right: 50px;
+    animation: scrollText 15s linear infinite;
+}
+@keyframes scrollText {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+}
+
+/* ✨ Sparkle chạy theo chữ */
+#marqueeSparkles {
+    position: absolute;
+    bottom: 5vh;
+    width: 100%;
+    height: 6vh;
+    pointer-events: none;
+    z-index: 9;
+}
+.marqueeSpark {
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 90%;
+    background: radial-gradient(circle, #9AFD72, #CEBBFC, transparent);
+    opacity: 0;
+    animation: sparkleMove linear infinite;
+}
+@keyframes sparkleMove {
+    0% { transform: translateY(0) scale(0.5); opacity: 0; }
+    50% { opacity: 1; transform: translateY(-1vh) scale(1); }
+    100% { transform: translateY(-2vh) scale(0.3); opacity: 0; }
+}
+</style>
+</head>
+<body>
+
+<div id="title">🌸 Happy Women’s Day 20/10 🌸</div>
+
+<!-- 🖼️ Ảnh treo đung đưa -->
+<div id="photoString">
+    <div class="photoClip"><img src="https://picsum.photos/200/200?random=1"></div>
+    <div class="photoClip"><img src="https://picsum.photos/201/200?random=2"></div>
+    <div class="photoClip"><img src="https://picsum.photos/202/200?random=3"></div>
+    <div class="photoClip"><img src="https://picsum.photos/203/200?random=4"></div>
+    <div class="photoClip"><img src="https://picsum.photos/204/200?random=5"></div>
+    <div class="photoClip"><img src="https://picsum.photos/205/200?random=6"></div>
+    <div class="photoClip"><img src="https://picsum.photos/206/200?random=7"></div>
+</div>
+
+<!-- 💫 Chữ chạy ngang + sparkles -->
+<div id="marqueeText"></div>
+<div id="marqueeSparkles"></div>
+
+<div id="flowersContainer"></div>
+
+<script>
+// ---- Chữ chạy ngang ----
+const marqueeText = document.getElementById("marqueeText");
+const text = " Happy Women’s Day 20/10 ";
+for(let i=0; i<30; i++){  // nhân chữ nhiều lần để liền mạch
+    const span = document.createElement("span");
+    span.textContent = text;
+    marqueeText.appendChild(span);
+}
+
+// ---- Sparkle quanh từng ảnh ----
+document.querySelectorAll('.photoClip').forEach(photo => {
+    for(let i=0;i<15;i++){
+        const spark = document.createElement('div');
+        spark.className = 'photoSpark';
+        spark.style.left = Math.random()*100 + '%';
+        spark.style.top = Math.random()*100 + '%';
+        spark.style.animationDuration = (1 + Math.random()*2) + 's';
+        photo.appendChild(spark);
+    }
+});
+
+// ---- Sparkle chạy theo chữ ----
+const marqueeSparkles = document.getElementById("marqueeSparkles");
+const numSparkles = 40;
+for(let i=0;i<numSparkles;i++){
+    const s = document.createElement('div');
+    s.className = 'marqueeSpark';
+    resetSparkle(s);
+    marqueeSparkles.appendChild(s);
+}
+
+function resetSparkle(s){
+    s.style.left = Math.random()*100 + '%';
+    s.style.animationDuration = (2 + Math.random()*2) + 's';
+    s.style.animationDelay = Math.random()*5 + 's';
+}
+
+setInterval(() => {
+    document.querySelectorAll('.marqueeSpark').forEach(s => resetSparkle(s));
+}, 5000);
+
+// ---- Hoa bay emoji ----
+const flowersContainer = document.getElementById("flowersContainer");
+const numFlowers = 25;
+const flowerIcons = ["🌸", "🌺", "🌻", "🌹", "💐", "💮", "🍀"];
+for(let i=0;i<numFlowers;i++){
+    const f = document.createElement("div");
+    f.className = "flower";
+    f.textContent = flowerIcons[Math.floor(Math.random()*flowerIcons.length)];
+    f.style.left = Math.random()*100 + "vw";
+    f.style.animationDuration = (8 + Math.random()*6) + "s";
+    f.style.transform = `scale(${0.5 + Math.random()*0.7}) rotate(${Math.random()*360}deg)`;
+    flowersContainer.appendChild(f);
+}
+</script>
+<!-- 🌟 Thêm thư + loa -->
+<div id="letterContainer">
+    <img id="letter" src="https://i.postimg.cc/tJJD9yD8/Gemini-Generated-Image-fgjh9wfgjh9wfgjh.png" alt="Letter">
+    <audio id="audio" src="https://jumpshare.com/s/e9sMSKuRdBNPVO7GImTQ"></audio>
+</div>
+
+<style>
+/* Thư */
+#letterContainer {
+    position: absolute;
+    bottom: 15vh;
+    right: 5vw;
+    width: 10vw;
+    cursor: pointer;
+    z-index: 15;
+}
+#letterContainer img {
+    width: 100%;
+    height: auto;
+}
+</style>
+
+<script>
+// ---- Thư ----
+const letter = document.getElementById("letter");
+const audio = document.getElementById("audio");
+
+letter.addEventListener("click", () => {
+    audio.play();
+});
+</script>
+
+</body>
+</html>
